@@ -25,12 +25,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: aqua;
-  transition: color 300ms linear 0s;
-}
-
-a:hover{
-  color: black;
 }
 
 header {
@@ -48,6 +42,15 @@ header {
   padding: 0 20px;
 }
 
+@keyframes shimmer {
+  0% {
+      background-position: top left;
+  }
+  100% {
+      background-position: top right;
+  }
+}
+
 nav {
   width: 40%;
 }
@@ -62,6 +65,20 @@ nav {
   font-weight: bold;
   font-size: larger;
   text-align: end;
+  transition: 400ms linear 0s;
+}
+
+.navbar-list a:hover {
+  color: aqua;
+  text-shadow: 0px 0px 6px aqua;
+}
+
+.navbar-list li {
+  transition: 300ms linear 0s;
+}
+
+.navbar-list li:hover {
+  transform: scale(1.2);
 }
 
 section {
@@ -88,7 +105,6 @@ section {
   z-index: -1;
   bottom: 0;
   right: 0;
-  opacity: 85%;
   animation: fade-up 1s ease-in-out 0s forwards;
 }
 
@@ -147,7 +163,7 @@ section {
   font-weight: bold;
 }
 
-.contact-me{
+.contact-me {
   font-weight: bold;
   margin-bottom: 10px;
   font-size: large;
@@ -199,8 +215,8 @@ section {
   margin-bottom: 30px;
 }
 
-.social-icons li a img {
-  width: 50px;
+.social-icon{
+  width: 30px;
   background-color: white;
   border-radius: 100%;
   border: 1px solid white;
@@ -208,8 +224,22 @@ section {
   transition: all 300ms linear 0s;
 }
 
-.social-icons li a img:hover{
+.social-icons li a img:hover {
   transform: scale(1.2);
+}
+
+.github:hover {
+  box-shadow: 0px 0px 20px rgb(197, 191, 191);
+}
+
+.linked-in:hover {
+  box-shadow: 0px 0px 30px #0a66c2;
+  background-color: #0a66c2;
+}
+
+.instagram:hover {
+  box-shadow: 0px 0px 20px rgb(236, 12, 49);
+  background-color: rgb(240, 105, 127);
 }
 
 .resume {
@@ -220,21 +250,44 @@ section {
   padding: 10px;
   font-weight: bold;
   border-radius: 20px;
+  transition: 300ms linear 0s;
 }
 
-.section-header{
+.resume:hover{
+  background-color: aqua;
+}
+
+.section-header {
   /* margin: 10px 0; */
+  color: aqua;
   font-size: 40px;
   margin-right: auto;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.aboutme{
+.linear-wipe {  
+  background: linear-gradient(to right, #FFF 20%, aqua 40%, aqua 60%, #FFF 80%);
+  background-size: 200% auto;
+  
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  animation: shine 3s linear infinite;
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.aboutme {
   align-items: center;
 }
 
-.aboutme-div{
+.aboutme-div {
   width: 100%;
 }
 
@@ -243,53 +296,54 @@ section {
   margin-bottom: 15px;
 }
 
-.kiel-view{
+.kiel-view {
   margin: 20px;
   height: 50vh;
   border-radius: 20px;
   border: 6px solid white;
 }
 
-.specials{
+.specials {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
   width: 75%;
 }
 
-.specials-container{
+.specials-container {
   width: 100%;
   margin-top: 40px;
 }
 
-.my-specialities{
+.my-specialities {
   margin: 20px 0;
 }
 
-.specials li{
+.specials li {
   font-size: medium;
   display: flex;
   flex-direction: column;
   row-gap: 10px;
 }
 
-.specials h3{
+.specials h3 {
   margin: 10px 0;
   font-size: large;
 }
 
-.specials p{
+.specials p {
   color: rgb(158, 158, 158);
+  text-align: justify;
 }
 
-.specials img{
+.specials img {
   width: 50px;
   background-color: white;
   border-radius: 100%;
   border: 2px solid white;
 }
 
-#portfolio{
+#portfolio {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -297,32 +351,41 @@ section {
   padding-top: 100px;
 }
 
-.portfolio-container{
+.portfolio-container {
   display: flex;
   height: 35vh;
   column-gap: 20px;
 }
 
-.portfolio-container img{
+.portfolio-container img {
   max-height: 100%;
   border-radius: 10px;
+  transition: 300ms linear 0s;
 }
 
-.portfolio-description{
+.portfolio-description {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
   /* background-color: red; */
 }
 
-.portfolio-topic{
+.portfolio-description img{
+  position: absolute;
+   right: 0;
+}
+
+.portfolio-topic {
   color: aqua;
   font-weight: bold;
   font-size: 20px;
 }
 
-.portfolio-description h1{
+.portfolio-description h1 {
   font-size: 40px;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .portfolio-desc {
@@ -332,58 +395,99 @@ section {
   font-size: large;
 }
 
-.tech-stacks{
+.tech-stacks {
   display: flex;
   align-items: center;
   column-gap: 5px;
 }
 
-.tech-stacks p{
+.tech-stacks p {
   flex-grow: 1;
   max-width: 100px;
   text-align: center;
   font-weight: bold;
+  color: rgb(158, 158, 158);
   background-color: rgba(19, 18, 18, 0.514);
   border: 2px solid white;
   padding: 5px;
   border-radius: 20px;
 }
 
-.flex-reverse{
+.github-link{
+  color: aqua;
+  transition: 300ms linear 0s;
+}
+
+.github-link:hover{
+  color: black;
+}
+
+.flex-reverse {
   flex-direction: row-reverse;
 }
 
-#contact{
+#contact {
   justify-content: center;
   column-gap: 100px;
 }
 
-.contact-list{
+.contact-list {
   width: 50%;
 }
 
-.contact-list img{
-  width: 25px;
+.contact-list img {
+  width: 40px;
   background-color: white;
   border-radius: 10px;
 }
 
-.contact-list li{
+.contact-list li {
   display: flex;
   align-items: center;
   column-gap: 10px;
   margin: 25px 0;
 }
+.contact-list li:hover .wiggle{
+  animation: wiggle 2s linear infinite;
+}
 
-.contact-list h3{
+.contact-list h3 {
   font-size: 25px;
 }
-.contact-list p{
+.contact-list p {
   font-size: 15px;
 }
 
-.contact-content p{
-  color: rgb(158, 158, 158);;
+.contact-content p {
+  color: rgb(158, 158, 158);
+}
+
+.wiggle span{
+  font-size: 40px;
+}
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
 }
 
 @media (max-width: 768px) {
@@ -392,10 +496,14 @@ section {
     justify-content: center;
   }
   nav {
-    width: 100%;
+    flex-grow: 1;
   }
   header {
     height: 60px;
+  }
+
+  header h1 {
+    flex-grow: 1;
   }
 
   .introduction-container {
@@ -427,91 +535,93 @@ section {
     width: 50%;
     border-radius: 100%;
     margin: 0 auto;
-    
   }
 
-  .kiel-view{
+  .kiel-view {
     height: 200px;
   }
 
-  header h1{
+  header h1 {
     font-size: 20px;
   }
 
-  .navbar-list a{
+  .navbar-list a {
     font-size: 10px;
   }
 }
 
+@media (max-width: 1260px) {
+  section {
+    width: 90%;
+  }
+}
+
 @media (max-width: 1024px) {
-  .profile-pic{
-    right: -35%;
+  .profile-pic {
+    right: -15%;
   }
 
-  nav{
+  nav {
     width: 50%;
   }
 
-  section{
-    width: 90%;
-  }
-  .aboutme{
+  .aboutme {
     flex-direction: column-reverse;
     justify-content: center;
   }
-  .aboutme-content{
+  .aboutme-content {
     width: 95%;
     margin-bottom: 20px;
   }
 
-  .kiel-view{
+  .kiel-view {
     height: 300px;
   }
 
-  .specials-container{
+  .specials-container {
     width: 100%;
     overflow-x: scroll;
     padding-top: 20px;
   }
 
-  .specials{
-    animation: slideshow-specials 5s linear 1s infinite alternate ;
+  .specials {
+    animation: slideshow-specials 5s linear 1s infinite alternate;
   }
-  
-  .portfolio-container{
+
+  .portfolio-container {
     width: 100%;
     flex-direction: column;
     height: auto;
   }
 
-  .portfolio-container img{
+  .portfolio-image {
     height: 300px;
     object-fit: cover;
   }
-  .portfolio-topic{
+  .portfolio-topic {
     font-size: 15px;
   }
-  .portfolio-container h1{
+  .portfolio-container h1 {
     font-size: 30px;
   }
 
-  .portfolio-desc{
+  .portfolio-desc {
     font-size: medium;
   }
 
-  #contact{
+  #contact {
     flex-direction: column;
   }
-  
-  .contact-list{
+
+  .contact-list {
     width: 100%;
   }
- 
+
   @keyframes slideshow-specials {
     from {
       transform: translateX(0);
     }
-    to{
+    to {
       transform: translateX(-75%);
     }
   }

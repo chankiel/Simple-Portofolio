@@ -22,7 +22,7 @@
   </head>
   <body id="top">
     <header>
-      <h1>KielChan</h1>
+      <h1 class="linear-wipe">KielChan</h1>
       <nav>
         <ul class="navbar-list">
           <li><a href="#top">Home</a></li>
@@ -58,16 +58,19 @@
             </div>
           </div>
           <p class="short-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
-            necessitatibus placeat, ducimus aperiam distinctio labore modi ipsa
-            dolores commodi aliquid tempora repudiandae quia esse alias iste,
-            nobis assumenda cupiditate eius.
+            I am an undergraduate student at Institut Teknologi Bandung,
+            majoring in Computer Science. I'm mostly working on web development
+            and other software engineering field.
           </p>
           <p class="contact-me">My Socials</p>
           <ul class="social-icons">
             <li>
               <a href="https://github.com/chankiel">
-                <img src="public/github.png" alt="github" class="social-logo" />
+                <img
+                  src="public/github.png"
+                  alt="github"
+                  class="social-icon github"
+                />
               </a>
             </li>
             <li>
@@ -75,7 +78,7 @@
                 <img
                   src="public/linkedin.png"
                   alt="github"
-                  class="social-logo"
+                  class="social-icon linked-in"
                 />
               </a>
             </li>
@@ -84,12 +87,14 @@
                 <img
                   src="public/instagram.png"
                   alt="github"
-                  class="social-logo"
+                  class="social-icon instagram"
                 />
               </a>
             </li>
           </ul>
-          <a href="" class="resume">See Resume</a>
+          <div class="resume-container">
+            <a href="" class="resume wiggle">See Resume</a>
+          </div>
         </div>
         <div class="fill-slot"></div>
         <img
@@ -115,42 +120,34 @@
           <div class="my-specialities">
             <h1>My Specialities</h1>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Veritatis tenetur ipsum labore sapiente rerum doloribus vitae
-              porro natus commodi eius? Officiis cupiditate soluta quidem eos
-              facere natus, recusandae laborum qui?
+              I specialize in web development, creating responsive and
+              user-friendly applications. Proficient in web app frameworks, such
+              as NextJS, React and Laravel. I also manage databases with MySQL
+              and MongoDB. I am committed to continuous learning, always
+              exploring new tools to enhance my skills.
             </p>
           </div>
           <div class="specials-container">
             <ul class="specials">
               <li>
-                <img src="public/github.png" alt="" />
+                <img src="public/html.png" alt="" />
                 <h2>Website development</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                  error quaerat animi nisi nam et, earum culpa facere sint,
-                  aperiam perspiciatis similique magnam illum quod. Quidem ipsa
-                  atque laboriosam optio?
+                  The process involves the creation, design, and maintenance of websites and web applications to ensure optimal functionality and user experience.
                 </p>
               </li>
               <li>
-                <img src="public/github.png" alt="" />
-                <h2>Website development</h2>
+                <img src="public/mobile.png" alt="" />
+                <h2>Mobile development</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                  error quaerat animi nisi nam et, earum culpa facere sint,
-                  aperiam perspiciatis similique magnam illum quod. Quidem ipsa
-                  atque laboriosam optio?
+                  This is the process of creating software applications specifically designed to run on mobile devices like smartphones and tablets, focusing on usability and performance.
                 </p>
               </li>
               <li>
-                <img src="public/github.png" alt="" />
-                <h2>Website development</h2>
+                <img src="public/ai.png" alt="" />
+                <h2>Artificial Intelligence</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                  error quaerat animi nisi nam et, earum culpa facere sint,
-                  aperiam perspiciatis similique magnam illum quod. Quidem ipsa
-                  atque laboriosam optio?
+                  The development of machines and systems that can perform tasks requiring human intelligence, including learning, reasoning, problem-solving, and decision-making.
                 </p>
               </li>
             </ul>
@@ -161,17 +158,25 @@
       <section id="portfolio">
         <h1 class="section-header">Portfolio</h1>
         <div class="portfolio-container">
-          <img src="public/twitter-clone.png" alt="twitter-clone" />
+          <img src="public/twitter-clone.png" alt="twitter-clone" class="portfolio-image"/>
           <div class="portfolio-description">
             <div>
               <p class="portfolio-topic">Web Development</p>
               <h1>Twittel (Twitter Clone)</h1>
+              <a href="https://github.com/chankiel/Twittel">
+                <img
+                  src="public/github.png"
+                  alt="github"
+                  class="social-icon github"
+                />
+              </a>
             </div>
             <p class="portfolio-desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
-              repellendus quam, perspiciatis dolore dolorum deleniti animi
-              recusandae quod cum voluptatum accusantium eos nihil iste nulla
-              atque ipsum tenetur fugit nam?
+              Twitter Clone is a web application that replicates the core
+              functionalities of Twitter, enabling users to connect, share, and
+              engage with content in real time. Users can create accounts, post
+              tweets, and follow other users to stay updated with their thoughts
+              and updates.
             </p>
             <div class="tech-stacks">
               <p>NextJS</p>
@@ -182,17 +187,26 @@
           </div>
         </div>
         <div class="portfolio-container flex-reverse">
-          <img src="public/gudang-film.png" alt="twitter-clone" />
+          <img src="public/gudang-film.png" alt="twitter-clone" class="portfolio-image" />
           <div class="portfolio-description">
             <div>
               <p class="portfolio-topic">Web Development</p>
               <h1>Gudang Film</h1>
+              <a href="https://github.com/chankiel/GudangFilm">
+                <img
+                  src="public/github.png"
+                  alt="github"
+                  class="social-icon github"
+                />
+              </a>
             </div>
             <p class="portfolio-desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
-              repellendus quam, perspiciatis dolore dolorum deleniti animi
-              recusandae quod cum voluptatum accusantium eos nihil iste nulla
-              atque ipsum tenetur fugit nam?
+              Gudang Film is a web application where users can purchase and
+              watch their favorite movies. The application offers a list of
+              films available for purchase, featuring various genres, including
+              Action, Horror, Romance, and many others. It also serves as a
+              streaming platform, allowing users to watch films immediately
+              after purchasing them.
             </p>
             <div class="tech-stacks">
               <p>Laravel</p>
@@ -203,27 +217,38 @@
           </div>
         </div>
         <div class="portfolio-container">
-          <img src="public/wikirace.png" alt="twitter-clone" />
+          <img src="public/wikirace.png" alt="twitter-clone" class="portfolio-image"/>
           <div class="portfolio-description">
             <div>
               <p class="portfolio-topic">Web Development</p>
               <h1>WikiRace</h1>
+              <a href="https://github.com/chankiel/Tubes2_FE_Chibye">
+                <img
+                  src="public/github.png"
+                  alt="github"
+                  class="social-icon github"
+                />
+              </a>
             </div>
             <p class="portfolio-desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
-              repellendus quam, perspiciatis dolore dolorum deleniti animi
-              recusandae quod cum voluptatum accusantium eos nihil iste nulla
-              atque ipsum tenetur fugit nam?
+              Wikirace is a game of finding the fastest way to get from a source
+              Wikipedia page to a target page, where the number of links needed
+              matters to the amount of time to reach the target page. In this
+              project, me and my team made Wikirace Game Solver, which uses BFS
+              and IDS for the searching algorithms.
             </p>
             <div class="tech-stacks">
-              <p>NextJS</p>
+              <p>React</p>
               <p>Tailwind</p>
-              <p>Prisma</p>
-              <p>MySQL</p>
+              <p>Go Gin</p>
             </div>
           </div>
         </div>
-        <h2>Check My <a class="github-link" href="https://github.com/chankiel">Github</a> for More!</h2>
+        <h2>
+          Check My
+          <a class="github-link" href="https://github.com/chankiel">Github</a>
+          for More!
+        </h2>
       </section>
       <section id="contact">
         <div class="contact-content">
@@ -237,25 +262,32 @@
         </div>
         <ul class="contact-list">
           <li>
-            <div>
+            <a
+              class="wiggle"
+              href="https://www.google.com/maps/place/Bandung,+Kota+Bandung,+Jawa+Barat/data=!4m2!3m1!1s0x2e68e6398252477f:0x146a1f93d3e815b2?sa=X&ved=1t:242&ictx=111"
+            >
               <span class="material-symbols-outlined"> person_pin_circle </span>
-            </div>
+            </a>
             <div>
               <h3>Location</h3>
               <p>Bandung, Indonesia</p>
             </div>
           </li>
           <li>
-            <div>
+            <a class="wiggle" href="https://mail.google.com/">
               <span class="material-symbols-outlined"> mail </span>
-            </div>
+            </a>
             <div>
               <h3>Mail</h3>
               <p>kielchanyeol@gmail.com</p>
             </div>
           </li>
           <li>
-            <img src="public/linkedin.png" alt="linked-in">
+            <a
+              href="https://www.linkedin.com/in/ignatius-jhon-hezkiel-chan-232431318/"
+            >
+              <img src="public/linkedin.png" alt="linked-in" class="wiggle" />
+            </a>
             <div>
               <h3>LinkedIn</h3>
               <p>Ignatius Jhon Hezkiel Chan</p>
