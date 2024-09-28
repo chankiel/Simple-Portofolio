@@ -414,8 +414,9 @@ section {
 }
 
 .github-link{
-  color: aqua;
+  color: #0077cc;
   transition: 300ms linear 0s;
+  text-decoration: underline;
 }
 
 .github-link:hover{
