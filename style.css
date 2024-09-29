@@ -651,7 +651,7 @@ section {
   }
 
   .specials {
-    animation: slideshow-specials 5s linear 1s infinite alternate;
+    animation: slideshow-specials 5s linear 1.5s infinite alternate;
   }
 
   .portfolio-container {
@@ -685,10 +685,10 @@ section {
 
   @keyframes slideshow-specials {
     from {
-      transform: translateX(0);
+      transform: translateX(0%);
     }
     to {
-      transform: translateX(-75%);
+      transform: translateX(-60%);
     }
   }
 }
