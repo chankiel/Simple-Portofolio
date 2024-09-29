@@ -353,12 +353,11 @@ section {
 
 .portfolio-container {
   display: flex;
-  height: 35vh;
   column-gap: 20px;
 }
 
-.portfolio-container img {
-  max-height: 100%;
+.portfolio-image {
+  max-height: 35vh;
   border-radius: 10px;
   transition: 300ms linear 0s;
 }
